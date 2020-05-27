@@ -55,7 +55,7 @@ class AptPackage(AptMeta):
 
     @property
     def pool_path(self):
-        return self._pool_path or self['Filename'] or 'pool/{}'.format(self.name)
+        return self._pool_path or self.get('Filename') or 'pool/{}'.format(self.name)
 
 
 class AptPackages(object):
